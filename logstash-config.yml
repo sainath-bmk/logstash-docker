@@ -1,0 +1,22 @@
+﻿apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: logstash-configmap
+data:
+  logstash.yml: |
+    #http.host: "0.0.0.0"
+    path.config: /usr/share/logstash/pipeline
+  logstash.conf: |
+    # all input will come from filebeat, no local logs
+    input {
+      beats {
+        port => 5044
+      }
+    }
+    filter {
+    }
+    output {
+      datadog {
+        api_key => "81b5ac49dd9d1ee9fc549734b6cf59a8"
+     }
+    }
