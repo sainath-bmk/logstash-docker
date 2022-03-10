@@ -4,7 +4,7 @@ metadata:
   name: logstash-configmap
 data:
   logstash.yml: |
-    #http.host: "0.0.0.0"
+    http.host: "0.0.0.0"
     path.config: /usr/share/logstash/pipeline
   logstash.conf: |
     # all input will come from filebeat, no local logs
