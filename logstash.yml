@@ -6,7 +6,7 @@ metadata:
   name: logstash
 spec:
   containers:
-  - image: jhacontainer.azurecr.io/logstash-datadog:v1
+  - image: jhacontainer.azurecr.io/logstash-datadog:v2
     name: logstash
     ports:
     - containerPort: 25826

@@ -16,7 +16,7 @@ data:
     filter {
     }
     output {
-      datadog {
+      datadog_logs {
         api_key => "81b5ac49dd9d1ee9fc549734b6cf59a8"
      }
     }
